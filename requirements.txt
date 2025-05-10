@@ -1,0 +1,12 @@
+modelscope
+qwen_vl_utils
+transformers
+datasets==3.6.0
+peft
+diffusers
+torch==2.5.1 
+torchvision==0.20.1 
+torchaudio==2.5.1
+swanlab
+deepspeed
+trl
