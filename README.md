@@ -1,4 +1,4 @@
-# CAICT大模型微调pytorch测试代码
+# Qwen2.5-VL模型目标检测（Grounding）任务领域微调
 
 ## 环境安装
 
