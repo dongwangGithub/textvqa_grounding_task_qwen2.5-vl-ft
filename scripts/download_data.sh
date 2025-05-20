@@ -1,1 +1,1 @@
-modelscope download --dataset Tina12345/textVQA_groundingtask_bbox  --local_dir /data/nvme0/textvqa_bbox
+modelscope download --dataset Tina12345/textVQA_groundingtask_bbox  --local_dir /home/lixinyu/data/textvqa_bbox

@@ -1,5 +1,5 @@
 # 模型设置，参数设置参考 trl.ModelConfig
-model_name_or_path: /home/jiangqiushan/test/models/Qwen2.5-VL-3B-Instruct
+model_name_or_path: /home/lixinyu/weights/Qwen2.5-VL-3B-Instruct
 auto_model_class: "Qwen2_5_VLForConditionalGeneration"
 torch_dtype: bfloat16
 
@@ -9,6 +9,7 @@ test_dataset_name: ./data/test.jsonl
 preprocessing_num_workers: 1
 data_collator: "Qwen2_5VLCollator"
 max_seq_length: 256
+max_image_side: 256
 
 # 训练设置，参数设置参考 transformers.TrainingArguments trl.SFTConfig
 ## 训练超参数
@@ -31,7 +32,7 @@ bf16_full_eval: true
 eval_strategy: steps
 eval_steps: 0.1
 ## 结果输出+日志日志设置
-output_dir: /home/jiangqiushan/test/models/SFT_Qwen2_5-VL-3B-Instruct_vqa
+output_dir: /home/lixinyu/weights/SFT_Qwen2_5-VL-3B-Instruct_vqa_bbox_new
 save_steps: 0.2
 save_total_limit: 1
 report_to: swanlab

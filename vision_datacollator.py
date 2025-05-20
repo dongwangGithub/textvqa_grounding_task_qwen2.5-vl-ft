@@ -62,7 +62,7 @@ class Qwen2_5VLCollator:
             answer = json.dumps(answer, indent=None)
             # 这了不知道是否需要添加prompt
             prompt = "Please enclose the corresponding positions using coordinate boxes. Examples of coordinate value formats: [x1,y1,x2,y2]"
-            question = '<image>\n'+ question+prompt
+            question = question+prompt
             messages = [
                 {
                     "role": "user",

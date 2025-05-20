@@ -6,14 +6,18 @@
 pip install -r requirements.txt
 ```
 
-## 数据集下载
+## 数据集和模型下载
 
 ```bash
-modelscope download --dataset Tina12345/textVQA_groundingtask_bbox  --local_dir /data/nvme0/textvqa_bbox
+bash download_data.sh
+bash download_model.sh
 ```
 
+## 数据集处理
+python scripts/convert2sft_format.py
 
-## 运行命令
+
+## 运行命令，开启训练
 
 8卡BF16 Zero2运行命令
 
@@ -32,7 +36,13 @@ accelerate launch \
 或者使用快速脚本
 
 ```bash
-scripts/sft_vqa_8gpu-z2.sh config configs/SFT_Qwen2_5-VL-3B-Instruct_vqa.yaml
+bash scripts/sft_vqa_8gpu-z2.sh config configs/SFT_Qwen2_5-VL-3B-Instruct_vqa.yaml
+```
+
+四卡用下面的代码
+
+```bash
+bash scripts/sft_vqa_4gpu-z2.sh configs/SFT_Qwen2_5-VL-3B-Instruct_vqa.yaml
 ```
 
 
